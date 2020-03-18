@@ -1,10 +1,22 @@
 {
   "name": "boilerplate-ts-server",
+  "description": "A boilerplate for a ts server with eslint, inspect, husky and lint-staged preconfigured.",
+  "keywords": [
+    "boilerplate",
+    "typescript",
+    "eslint",
+    "husky",
+    "lint-staged"
+  ],
   "version": "0.1.0",
   "author": "Xorifelse",
-  "main": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Xorifelse/boilerplate-ts-server.git"
+  },
   "license": "MIT",
   "private": true,
+  "main": "src/index.ts",
   "scripts": {
     "start": "ts-node .",
     "dev": "nodemon",
