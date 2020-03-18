@@ -1,0 +1,42 @@
+{
+  "name": "boilerplate-ts-server",
+  "version": "0.1.0",
+  "author": "Xorifelse",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "ts-node .",
+    "dev": "nodemon",
+    "debug": "node --inspect=5858 -r ts-node/register .",
+    "build": "tsc",
+    "lint": "tsc --noEmit && eslint '*/**/*.ts' --quiet",
+    "lint:fix": "tsc --noEmit && eslint '*/**/*.ts' --quiet --fix"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.1",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsc --noEmit && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts}": [
+      "eslint --fix"
+    ]
+  }
+}

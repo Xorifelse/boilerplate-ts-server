@@ -1,0 +1,20 @@
+{
+  // Debugger Setup
+  "debug.node.autoAttach": "on",
+  // Spaces in projects
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+
+  // Linting Setup
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+  },
+  "eslint.validate": [
+    "typescript",
+  ]
+}
