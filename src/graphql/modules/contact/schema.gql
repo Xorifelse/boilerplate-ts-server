@@ -1,0 +1,14 @@
+extend type Contact {
+  id: ID!
+  firstname: String!
+  lastname: String!
+  email: String!
+}
+
+extend type Query {
+  contact: Contact!
+}
+
+extend type Mutation {
+  createContact: Contact!
+}

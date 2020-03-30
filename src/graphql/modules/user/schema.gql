@@ -1,0 +1,23 @@
+extend type User {
+  id: ID!
+  email: String!
+  contact: Contact!
+}
+
+type AuthPayload {
+  token: String!
+  user: User!
+}
+
+extend type Query {
+  me: User
+}
+
+extend type Mutation {
+  signup(firstname: String!, lastname: String!, email: String!, password: String!): AuthPayload!
+  signin(email: String!, password: String!): AuthPayload!
+}
+
+extend type Subscription {
+  placeholder: String!
+}
